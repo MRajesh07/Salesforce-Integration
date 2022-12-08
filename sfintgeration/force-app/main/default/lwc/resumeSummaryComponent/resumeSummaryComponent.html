@@ -1,0 +1,15 @@
+<template>
+   <section>
+       <h1 class="section_heading slds-var-p-bottom_medium">{carrerSummary.HEADING}</h1>
+       <div>
+       <p class="font16">{carrerSummary.DESCRIPTION}</p>
+       <ul class="slds-var-m-top_medium slds-var-p-left_large summary_list slds-is-relative">
+           <template for:each={carrerSummary.KEYS_POINTS} for:item="points">
+               <li key={points} class="font16">
+                {points}
+               </li>
+           </template>
+       </ul>
+    </div>
+   </section>
+</template>

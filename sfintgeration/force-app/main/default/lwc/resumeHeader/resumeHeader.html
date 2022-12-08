@@ -1,0 +1,39 @@
+<template>
+    <header>
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-large-size_3-of-12 mobile_text_center">
+            <image src={profileImage} alt="My Profile Image" class="profile_pic"></image>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_6-of-12 m-auto">
+            <div class="nameHeading mobile_text_center">{userDetails.Name}</div>
+            <div class="roleHeading mobile_text_center">{userDetails.Role}</div>
+            <ul class="small_font">
+                <li class="slds-var-m-bottom_small">
+                    <a href={email} class="link">
+                        <lightning-icon icon-name="utility:email" alternative-text="email" size="x-small" title="Email" class="slds-var-m-right_small"></lightning-icon>
+                        {userDetails.Email}
+                    </a>
+                </li>
+                <li class="slds-var-m-bottom_small">
+                    <a href={phone} class="link">
+                        <lightning-icon icon-name="utility:dialing" alternative-text="Phone" size="x-small" title="Phone" class="slds-var-m-right_small"></lightning-icon>
+                        {userDetails.PhoneNumber}
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-large-size_3-of-12 m-auto">
+            <ul class="small_font">
+                <template for:each={socialLinks} for:item="link">
+                    <li class="slds-var-m-bottom_small" key={link.type}>
+                        <a href={link.url} target="_blank">
+                            <img src={link.icon} alt={link.type} width="20px" class="slds-var-m-right_small"/>
+                            <span>{link.label}</span>
+                        </a>
+                    </li>
+                </template>
+            </ul>
+        </div>
+    </div>
+</header>
+</template>

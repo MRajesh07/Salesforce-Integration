@@ -1,0 +1,18 @@
+.THIS.div1 {
+    background-color: #FFFFFF;
+    position: relative;
+}
+.THIS .winword{
+   text-transform: uppercase;
+   font-weight: bold;
+}
+.THIS .disableboard{
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 1;
+   cursor:not-allowed;
+   /* background-color: red; */
+ }

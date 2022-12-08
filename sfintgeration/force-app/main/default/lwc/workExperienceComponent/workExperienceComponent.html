@@ -1,0 +1,26 @@
+<template>
+    <section>
+        <h1 class="section_heading">{workExperience.HEADING}</h1>
+        <div>
+            <div class="slds-var-p-left_x-large slds-is-relative workExp_content">
+            <template for:each={workExperience.EXPERIENCES} for:item="exp">
+                <section key={exp} class="workExp_individual slds-is-relative">
+                    <h3 class="blue_color font16 fontWeight700">{exp.ROLE}</h3>
+                    <div class="blue_color font16">{exp.COMPANY_NAME} ({exp.DURATION})</div>
+                    <div class="slds-var-m-bottom_xx-large"><p>{exp.DESCRIPTION}</p>
+                        <ul class="description_point_box">
+                            <template for:each={exp.DESCRIPTION_POINTS} for:item="points">
+                                <li key={points}>{points}</li>
+                            </template>
+                        </ul>
+                        <h4>{exp.TECHNOLOGIES_USED.HEADING}</h4>
+                        <template for:each={exp.TECHNOLOGIES_USED.LIST} for:item="list">
+                            <div key={list} class="tech_tile">{list}</div>
+                        </template>
+                    </div>
+                </section>
+            </template>
+        </div>
+    </div>
+    </section>
+</template>
